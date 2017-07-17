@@ -10,7 +10,7 @@ namespace Hallmanac.CryptoHelpers
     /// <summary>
     /// Class that provides strong hashing capabilities.
     /// </summary>
-    public class PasswordHashingSvc
+    public class PasswordHashingSvc : IPasswordHashingSvc
     {
         private const int MinIterationRange = 8000;
         private const int MaxIterationRange = 15000;
@@ -249,5 +249,18 @@ namespace Hallmanac.CryptoHelpers
             var hashToHexString = hashBytes.ToHexString();
             return hashToHexString;
         }
+    }
+
+
+    public interface IPasswordHashingSvc
+    {
+        FunqResult ComparePasswords(string givenPassword, PasswordHashingData hashData);
+        FunqResult<byte[]> ComputePasswordAndSaltBytes(byte[] salt, string password, int iterationCount = 8000);
+        string ComputeSha512ToHexString(string textToHash);
+        string GenerateHexKeyFromByteLength(int byteLength);
+        void GenerateRandomBytes(byte[] buffer);
+        string GetAppLevelPasswordHash(string givenPassword);
+        byte[] GetRandomSalt(int saltLength);
+        FunqResult<PasswordHashingData> HashPassword(string givenPassword);
     }
 }
