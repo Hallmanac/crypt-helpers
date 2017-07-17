@@ -1,14 +1,11 @@
-﻿using System;
-
-
-namespace System
+﻿namespace System
 {
     public static class ByteArrayExtensions
     {
-        ///// <summary>
-        /////     Converts a given byte array into a hexadecimal string.
-        ///// </summary>
-        public static string BytesToHexString(this byte[] @this)
+        /// <summary>
+        /// Converts a given byte array into a hexadecimal string.
+        /// </summary>
+        public static string ToHexString(this byte[] @this)
         {
             if (@this == null)
             {
