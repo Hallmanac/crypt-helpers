@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hallmanac.CryptoHelpers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers.Tests", "Hallmanac.CryptoHelpers.Tests\Hallmanac.CryptoHelpers.Tests.csproj", "{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_NetFramework45", "Hallmanac.CryptoHelpers_NetFramework45\Hallmanac.CryptoHelpers_NetFramework45.csproj", "{DBF88E5D-96A1-4359-9072-69700835A63C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF88E5D-96A1-4359-9072-69700835A63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF88E5D-96A1-4359-9072-69700835A63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF88E5D-96A1-4359-9072-69700835A63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF88E5D-96A1-4359-9072-69700835A63C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
