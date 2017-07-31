@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hallmanac.CryptoHelpers", "Hallmanac.CryptoHelpers\Hallmanac.CryptoHelpers.csproj", "{C5C10124-D000-4DC4-952B-39A048DE3553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers.Tests", "Hallmanac.CryptoHelpers.Tests\Hallmanac.CryptoHelpers.Tests.csproj", "{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_NetFramework45", "Hallmanac.CryptoHelpers_NetFramework45\Hallmanac.CryptoHelpers_NetFramework45.csproj", "{DBF88E5D-96A1-4359-9072-69700835A63C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_Net45.Tests", "Hallmanac.CryptoHelpers_Net45.Tests\Hallmanac.CryptoHelpers_Net45.Tests.csproj", "{0E068BEF-D556-4736-A422-5751BF4BF4CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{C5C10124-D000-4DC4-952B-39A048DE3553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C10124-D000-4DC4-952B-39A048DE3553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C10124-D000-4DC4-952B-39A048DE3553}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABFC972B-BDAE-492A-BB7A-9664F5B10D05}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBF88E5D-96A1-4359-9072-69700835A63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBF88E5D-96A1-4359-9072-69700835A63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBF88E5D-96A1-4359-9072-69700835A63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBF88E5D-96A1-4359-9072-69700835A63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E068BEF-D556-4736-A422-5751BF4BF4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E068BEF-D556-4736-A422-5751BF4BF4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E068BEF-D556-4736-A422-5751BF4BF4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E068BEF-D556-4736-A422-5751BF4BF4CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
