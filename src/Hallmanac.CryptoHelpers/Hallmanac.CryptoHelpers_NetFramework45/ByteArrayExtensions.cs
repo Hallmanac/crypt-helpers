@@ -1,7 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 
-namespace System
+namespace Hallmanac.CryptoHelpers_Net45
 {
     public static class ByteArrayExtensions
     {

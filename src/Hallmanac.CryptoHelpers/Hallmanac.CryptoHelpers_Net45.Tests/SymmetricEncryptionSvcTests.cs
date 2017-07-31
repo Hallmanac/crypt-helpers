@@ -1,6 +1,4 @@
-﻿using Hallmanac.CryptoHelpers_NetFramework45;
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
 namespace Hallmanac.CryptoHelpers_Net45.Tests

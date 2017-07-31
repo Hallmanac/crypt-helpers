@@ -1,4 +1,4 @@
-﻿namespace Hallmanac.CryptoHelpers_NetFramework45
+﻿namespace Hallmanac.CryptoHelpers_Net45
 {
     public class PasswordHashingData
     {

@@ -5,7 +5,7 @@ using System.Text;
 using Funqy.CSharp_Net45;
 
 
-namespace Hallmanac.CryptoHelpers_NetFramework45
+namespace Hallmanac.CryptoHelpers_Net45
 {
     /// <summary>
     /// Provides strong hashing services using using the standards from RFC2898 with key stretching and multiple hashing iterations on a SHA512 algorthim.

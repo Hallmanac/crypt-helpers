@@ -7,8 +7,8 @@
     <ProjectGuid>{DBF88E5D-96A1-4359-9072-69700835A63C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hallmanac.CryptoHelpers_NetFramework45</RootNamespace>
-    <AssemblyName>Hallmanac.CryptoHelpers_NetFramework45</AssemblyName>
+    <RootNamespace>Hallmanac.CryptoHelpers_Net45</RootNamespace>
+    <AssemblyName>Hallmanac.CryptoHelpers_Net45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

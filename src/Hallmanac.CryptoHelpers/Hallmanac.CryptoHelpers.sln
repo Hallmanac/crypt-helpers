@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hallmanac.CryptoHelpers", "Hallmanac.CryptoHelpers\Hallmanac.CryptoHelpers.csproj", "{C5C10124-D000-4DC4-952B-39A048DE3553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_NetFramework45", "Hallmanac.CryptoHelpers_NetFramework45\Hallmanac.CryptoHelpers_NetFramework45.csproj", "{DBF88E5D-96A1-4359-9072-69700835A63C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_Net45", "Hallmanac.CryptoHelpers_NetFramework45\Hallmanac.CryptoHelpers_Net45.csproj", "{DBF88E5D-96A1-4359-9072-69700835A63C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_Net45.Tests", "Hallmanac.CryptoHelpers_Net45.Tests\Hallmanac.CryptoHelpers_Net45.Tests.csproj", "{0E068BEF-D556-4736-A422-5751BF4BF4CA}"
 EndProject
