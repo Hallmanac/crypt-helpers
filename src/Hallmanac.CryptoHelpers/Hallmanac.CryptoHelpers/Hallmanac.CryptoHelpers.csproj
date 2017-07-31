@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <Authors>Brian Hall</Authors>
+    <Company>Brian Hall</Company>
+    <Product>Hallmanac Crypto Helpers .NET Standard</Product>
+    <Description>A library to make it easier to leverage crypto operations inside .NET. Use it for symmetric encryption and decryption. For properly hashing passwords (and that means properly in accordance to a Troy Hunt standard in .NET). This library also brings along some basic helper extension methods and utility generators for hashing and some generators for various things like random byte arrays, random numbers, and basic hashing.
+
+1.0.0. -- Initial release of library.</Description>
+    <Copyright>Brian Hall - 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/Hallmanac/crypto-helpers/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Hallmanac/crypto-helpers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Hallmanac/crypto-helpers</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>C# Cryptography Crypto Encryption Decryption Hashing Password-Hashing</PackageTags>
+    <PackageReleaseNotes>Inital release of library.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
