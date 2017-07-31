@@ -6,6 +6,9 @@ using Funqy.CSharp;
 
 namespace Hallmanac.CryptoHelpers
 {
+    /// <summary>
+    /// Sizes of keys used when doing encryption with AES standards
+    /// </summary>
     public enum AesKeySize
     {
         Size256 = 256,
@@ -14,6 +17,9 @@ namespace Hallmanac.CryptoHelpers
     }
 
 
+    /// <summary>
+    /// A service that provides helper methods to encrypt and decrypt text using symmetric encryption techniques. 
+    /// </summary>
     public class SymmetricEncryptionSvc : ISymmetricEncryptionSvc
     {
         /// <summary>
@@ -173,6 +179,9 @@ namespace Hallmanac.CryptoHelpers
     }
 
 
+    /// <summary>
+    /// A service that provides helper methods to encrypt and decrypt text using symmetric encryption techniques. 
+    /// </summary>
     public interface ISymmetricEncryptionSvc
     {
         /// <summary>

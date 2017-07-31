@@ -7,6 +7,9 @@ using Funqy.CSharp_Net45;
 
 namespace Hallmanac.CryptoHelpers_Net45
 {
+    /// <summary>
+    /// Sizes of keys used when doing encryption with AES standards
+    /// </summary>
     public enum AesKeySize
     {
         Size256 = 256,
@@ -14,7 +17,9 @@ namespace Hallmanac.CryptoHelpers_Net45
         Size192 = 192
     }
 
-
+    /// <summary>
+    /// Block sizes used when creating custom RijndaelManaged encryption ciphers
+    /// </summary>
     public enum BlockSize
     {
         Size256 = 256,
@@ -23,6 +28,9 @@ namespace Hallmanac.CryptoHelpers_Net45
     }
 
 
+    /// <summary>
+    /// A service that provides helper methods to encrypt and decrypt text using symmetric encryption techniques. 
+    /// </summary>
     public class SymmetricEncryptionSvc : ISymmetricEncryptionSvc
     {
         /// <summary>
@@ -336,7 +344,9 @@ namespace Hallmanac.CryptoHelpers_Net45
     }
 
 
-
+    /// <summary>
+    /// A service that provides helper methods to encrypt and decrypt text using symmetric encryption techniques. 
+    /// </summary>
     public interface ISymmetricEncryptionSvc
     {
         /// <summary>
