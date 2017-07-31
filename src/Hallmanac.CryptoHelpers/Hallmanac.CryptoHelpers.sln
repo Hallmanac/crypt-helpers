@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_Net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hallmanac.CryptoHelpers_Net45", "Hallmanac.CryptoHelpers_Net45\Hallmanac.CryptoHelpers_Net45.csproj", "{DBF88E5D-96A1-4359-9072-69700835A63C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F56F9D0F-AAF3-4BF6-9DF5-575736AEA05C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
