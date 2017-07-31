@@ -6,16 +6,16 @@ namespace System
     public static class ByteArrayExtensions
     {
         /// <summary>
-        /// Converts a given byte array into a hexadecimal string.
+        /// Converts a given byte array into a hexadecimal string and removed all dashes by default (unless specified otherwise).
         /// </summary>
-        public static string ToHexString(this byte[] @this)
+        public static string ToHexString(this byte[] @this, bool removeDashes = true)
         {
             if (@this == null)
             {
                 return null;
             }
             var hex = BitConverter.ToString(@this);
-            var hexString = hex.Replace("-", "");
+            var hexString = removeDashes ? hex.Replace("-", "") : hex;
             return hexString;
         }
 
