@@ -60,7 +60,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Hallmanac.CryptoHelpers_NetFramework45\Hallmanac.CryptoHelpers_Net45.csproj">
+    <ProjectReference Include="..\Hallmanac.CryptoHelpers_Net45\Hallmanac.CryptoHelpers_Net45.csproj">
       <Project>{dbf88e5d-96a1-4359-9072-69700835a63c}</Project>
       <Name>Hallmanac.CryptoHelpers_Net45</Name>
     </ProjectReference>
