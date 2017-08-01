@@ -176,6 +176,28 @@ namespace Hallmanac.CryptoHelpers
                 return FunqFactory.Fail(message, (string)null);
             }
         }
+
+
+        /// <summary>
+        /// Checks the given text with the given key to see whether or not it's encrypted using any of the
+        /// encryption combinations
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="key"></param>
+        public bool IsEncrypted(string text, string key)
+        {
+            if (string.IsNullOrWhiteSpace(text) || string.IsNullOrWhiteSpace(key))
+                return false;
+
+            // AES encryption
+            var keySize128 = Decrypt(text, key, AesKeySize.Size128);
+            var keySize192 = Decrypt(text, key, AesKeySize.Size192);
+            var keySize256 = Decrypt(text, key, AesKeySize.Size256);
+            if (keySize128.IsSuccessful || keySize192.IsSuccessful || keySize256.IsSuccessful)
+                return true;
+
+            return false;
+        }
     }
 
 
@@ -209,5 +231,14 @@ namespace Hallmanac.CryptoHelpers
         /// <param name="key">The (HEXADECIMAL) key used to encrypt the text and that will be used to decrypt it</param>
         /// <param name="keySize">The size of the key for the creation of the cipher</param>
         FunqResult<string> Decrypt(string cipherText, string key, AesKeySize keySize);
+
+
+        /// <summary>
+        /// Checks the given text with the given key to see whether or not it's encrypted using any of the
+        /// encryption combinations
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="key"></param>
+        bool IsEncrypted(string text, string key);
     }
 }

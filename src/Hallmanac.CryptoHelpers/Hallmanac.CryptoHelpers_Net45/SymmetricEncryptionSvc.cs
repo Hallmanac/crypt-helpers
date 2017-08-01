@@ -341,6 +341,46 @@ namespace Hallmanac.CryptoHelpers_Net45
                 return FunqFactory.Fail($"An exception was thrown while attempting to decrypt the given text. It is as follows:\n\t{e.Message}", (string)null);
             }
         }
+
+
+        /// <summary>
+        /// Checks the given text with the given key to see whether or not it's encrypted using any of the
+        /// encryption combinations
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="key"></param>
+        public bool IsEncrypted(string text, string key)
+        {
+            if (string.IsNullOrWhiteSpace(text) || string.IsNullOrWhiteSpace(key))
+                return false;
+
+            // AES encryption
+            var keySize128 = Decrypt(text, key, AesKeySize.Size128);
+            var keySize192 = Decrypt(text, key, AesKeySize.Size192);
+            var keySize256 = Decrypt(text, key, AesKeySize.Size256);
+            if (keySize128.IsSuccessful || keySize192.IsSuccessful || keySize256.IsSuccessful)
+                return true;
+
+            // RijndaelManaged encryption
+            var key128Block128 = CustomDecrypt(text, key, AesKeySize.Size128, BlockSize.Size128);
+            var key192Block128 = CustomDecrypt(text, key, AesKeySize.Size192, BlockSize.Size128);
+            var key256Block128 = CustomDecrypt(text, key, AesKeySize.Size256, BlockSize.Size128);
+            if (key128Block128.IsSuccessful || key192Block128.IsSuccessful || key256Block128.IsSuccessful)
+                return true;
+
+            var key128Block192 = CustomDecrypt(text, key, AesKeySize.Size128, BlockSize.Size192);
+            var key192Block192 = CustomDecrypt(text, key, AesKeySize.Size192, BlockSize.Size192);
+            var key256Block192 = CustomDecrypt(text, key, AesKeySize.Size256, BlockSize.Size192);
+            if (key128Block192.IsSuccessful || key192Block192.IsSuccessful || key256Block192.IsSuccessful)
+                return true;
+
+            var key128Block256 = CustomDecrypt(text, key, AesKeySize.Size128, BlockSize.Size256);
+            var key192Block256 = CustomDecrypt(text, key, AesKeySize.Size192, BlockSize.Size256);
+            var key256Block256 = CustomDecrypt(text, key, AesKeySize.Size256, BlockSize.Size256);
+            if (key128Block256.IsSuccessful || key192Block256.IsSuccessful || key256Block256.IsSuccessful)
+                return true;
+            return false;
+        }
     }
 
 
@@ -404,5 +444,14 @@ namespace Hallmanac.CryptoHelpers_Net45
         /// <param name="blockSize">block size used in the creation of the cipher</param>
         /// <returns></returns>
         FunqResult<string> CustomDecrypt(string cipherText, string key, AesKeySize keySize, BlockSize blockSize);
+
+
+        /// <summary>
+        /// Checks the given text with the given key to see whether or not it's encrypted using any of the
+        /// encryption combinations
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="key"></param>
+        bool IsEncrypted(string text, string key);
     }
 }
