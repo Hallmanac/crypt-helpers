@@ -49,5 +49,27 @@ namespace Hallmanac.CryptoHelpers_Net45.Tests
             Assert.IsTrue(decryptedPreText.IsSuccessful);
             Assert.AreEqual(decryptedPreText.Value, TextToEncrypt);
         }
+
+
+        [TestMethod]
+        public void IsEncrypted_Should_Return_True_When_Text_Is_Encrypted()
+        {
+            var encryptSvc = new SymmetricEncryptionSvc();
+            const string preEncryptedText = "FCDBB7CF7AFCE440899AE9D2949B1110C8289EF602A290467968FFF76EABA94B_4D220909BD9B34192F288931A347B1A0109931F76D7475286CA095A7F80CBF5F42BBAFEDD27ACE52C600AC1D7E061ABE1D46EFCAB6EF75531D4F40B84558082C";
+            var isEncrypted = encryptSvc.IsEncrypted(preEncryptedText, EncryptionKey256);
+
+            Assert.IsTrue(isEncrypted);
+        }
+
+
+        [TestMethod]
+        public void IsEncrypted_Should_Return_False_When_Text_Is_Not_Encrypted()
+        {
+            var encryptSvc = new SymmetricEncryptionSvc();
+            const string plainText = "The cow jumped over the moon.";
+            var isEncrypted = encryptSvc.IsEncrypted(plainText, EncryptionKey256);
+
+            Assert.IsFalse(isEncrypted);
+        }
     }
 }
