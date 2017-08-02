@@ -36,5 +36,23 @@ namespace Hallmanac.CryptoHelpers_Net45
                 return null;
             }
         }
+
+
+        /// <summary>
+        /// Converts the current byte array into a Base64 string and returns the value. This is done using
+        /// the Convert.ToBase64String method inside a try/catch block. Returns null if unsuccessful.
+        /// </summary>
+        public static string ToBase64String(this byte[] @this)
+        {
+            try
+            {
+                var result = Convert.ToBase64String(@this);
+                return result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }
