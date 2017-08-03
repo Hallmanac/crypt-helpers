@@ -9,7 +9,7 @@ namespace Hallmanac.CryptoHelpers_Net45
     public class HashingHelpers : IHashingHelpers
     {
         /// <summary>
-        /// This will compute a basic SHA1 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// This will compute a basic MD5 hash for uses within this Encryption Service class. This hash is not recommended for
         /// true security use cases.
         /// </summary>
         public string ComputeMD5Hash(string textToHash, string salt = "")
@@ -94,7 +94,7 @@ namespace Hallmanac.CryptoHelpers_Net45
 
 
         /// <summary>
-        /// Computes an HMAC hash based on the MD5 algorithm using the given key
+        /// Computes an HMAC hash based on the MD5 algorithm using the given key and returns a string in hexidecmal format
         /// </summary>
         /// <param name="text">Text to Hash</param>
         /// <param name="key">Key to use for the HMAC part</param>
@@ -112,7 +112,7 @@ namespace Hallmanac.CryptoHelpers_Net45
 
 
         /// <summary>
-        ///     Computes a hash based on the HMACSHA1 algorithm using the given key.
+        ///     Computes a hash based on the HMACSHA1 algorithm using the given key and returns a string in hexadecimal format.
         /// </summary>
         public string ComputeHmacSha1ForHex(string textToHash, string key)
         {
@@ -134,7 +134,7 @@ namespace Hallmanac.CryptoHelpers_Net45
 
 
         /// <summary>
-        ///     Computes a hash based on the HMACSHA256 algorithm using the given key.
+        ///     Computes a hash based on the HMACSHA256 algorithm using the given key and returns a string in hexadecimal format.
         /// </summary>
         public string ComputeHmacSha256ForHex(string textToHash, string key)
         {
@@ -155,7 +155,7 @@ namespace Hallmanac.CryptoHelpers_Net45
 
 
         /// <summary>
-        ///     Computes a hash based on the HMACSHA384 algorithm using the given key.
+        ///     Computes a hash based on the HMACSHA384 algorithm using the given key and returns a string in hexadecimal format.
         /// </summary>
         public string ComputeHmacSha384ForHex(string textToHash, string key)
         {
@@ -175,7 +175,7 @@ namespace Hallmanac.CryptoHelpers_Net45
 
 
         /// <summary>
-        ///     Computes a hash based on the HMACSHA512 algorithm using the given key.
+        ///     Computes a hash based on the HMACSHA512 algorithm using the given key and returns a string in hexadecimal format.
         /// </summary>
         public string ComputeHmacSha512ForHex(string textToHash, string key)
         {
@@ -265,7 +265,7 @@ namespace Hallmanac.CryptoHelpers_Net45
     public interface IHashingHelpers
     {
         /// <summary>
-        /// This will compute a basic SHA1 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// This will compute a basic MD5 hash for uses within this Encryption Service class. This hash is not recommended for
         /// true security use cases.
         /// </summary>
         string ComputeMD5Hash(string textToHash, string salt = "");
