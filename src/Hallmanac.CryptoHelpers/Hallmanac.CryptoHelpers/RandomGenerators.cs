@@ -108,6 +108,18 @@ namespace Hallmanac.CryptoHelpers
 
 
         /// <summary>
+        /// Generates a random 512 bit key (in a byte array) and returns it as a hexadecimal string
+        /// </summary>
+        /// <returns></returns>
+        public string Generate512BitKey()
+        {
+            var buffer = new byte[64];
+            GenerateRandomBytes(buffer);
+            return buffer.ToHexString();
+        }
+
+
+        /// <summary>
         ///     Generates a random 256 bit key (in a byte array) and returns it as a hexadecimal string.
         /// </summary>
         /// <returns>A hexadecimal string based on the randomly generated 256 bit key byte array</returns>
@@ -207,5 +219,12 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         /// <returns>A hexadecimal string based on the randomly generated 128 bit key byte array</returns>
         string Generate128BitKey();
+
+
+        /// <summary>
+        /// Generates a random 512 bit key (in a byte array) and returns it as a hexadecimal string
+        /// </summary>
+        /// <returns></returns>
+        string Generate512BitKey();
     }
 }
