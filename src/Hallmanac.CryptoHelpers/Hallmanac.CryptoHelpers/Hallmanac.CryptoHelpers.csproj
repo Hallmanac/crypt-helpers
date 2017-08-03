@@ -11,17 +11,17 @@
 
 1.0.1 -- Added better constructors and to the main entry point "CryptoHelpers" class. Also added the missing property for SymmetricEncryptionSvc.
 
-1.2.0 -- Added HashingHelpers and RandomGenerators to the library</Description>
+1.1.0 -- Added HashingHelpers and RandomGenerators to the library</Description>
     <Copyright>Brian Hall - 2017</Copyright>
     <PackageLicenseUrl>https://github.com/Hallmanac/crypto-helpers/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Hallmanac/crypto-helpers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Hallmanac/crypto-helpers</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>C# Cryptography Crypto Encryption Decryption Hashing Password-Hashing</PackageTags>
-    <PackageReleaseNotes>1.2.0 -- Added HashingHelpers and RandomGenerators to the library</PackageReleaseNotes>
+    <PackageReleaseNotes>1.1.0 -- Added HashingHelpers and RandomGenerators to the library</PackageReleaseNotes>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.2.0</Version>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
