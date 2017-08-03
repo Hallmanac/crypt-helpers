@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ByteArrayExtensionTests.cs" />
     <Compile Include="CryptoHelpersTests.cs" />
+    <Compile Include="HashingHelpersTests.cs" />
     <Compile Include="StringExtensionTests.cs" />
     <Compile Include="SymmetricEncryptionSvcTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
