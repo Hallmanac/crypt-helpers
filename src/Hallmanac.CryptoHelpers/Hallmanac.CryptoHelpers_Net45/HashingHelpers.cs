@@ -3,7 +3,10 @@
 
 namespace Hallmanac.CryptoHelpers_Net45
 {
-    public class HashingHelpers
+    /// <summary>
+    /// Helper methods that allow for easily hashing data using various algorithms and returning strings
+    /// </summary>
+    public class HashingHelpers : IHashingHelpers
     {
         /// <summary>
         /// This will compute a basic SHA1 hash for uses within this Encryption Service class. This hash is not recommended for
@@ -253,5 +256,102 @@ namespace Hallmanac.CryptoHelpers_Net45
             var base64String = hash.ToBase64String();
             return base64String;
         }
+    }
+
+
+    /// <summary>
+    /// Helper methods that allow for easily hashing data using various algorithms and returning strings
+    /// </summary>
+    public interface IHashingHelpers
+    {
+        /// <summary>
+        /// This will compute a basic SHA1 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// true security use cases.
+        /// </summary>
+        string ComputeMD5Hash(string textToHash, string salt = "");
+
+
+        /// <summary>
+        /// This will compute a basic SHA1 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// true security use cases.
+        /// </summary>
+        string ComputeSha1Hash(string textToHash, string salt = "");
+
+
+        /// <summary>
+        /// This will compute a basic SHA256 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// </summary>
+        string ComputeSha256Hash(string textToHash, string salt = "");
+
+
+        /// <summary>
+        /// This will compute a basic SHA384 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// </summary>
+        string ComputeSha384Hash(string textToHash, string salt = "");
+
+
+        /// <summary>
+        /// This will compute a basic SHA512 hash for uses within this Encryption Service class. This hash is not recommended for
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// </summary>
+        string ComputeSha512Hash(string textToHash, string salt = "");
+
+
+        /// <summary>
+        /// Computes an HMAC hash based on the MD5 algorithm using the given key
+        /// </summary>
+        /// <param name="text">Text to Hash</param>
+        /// <param name="key">Key to use for the HMAC part</param>
+        string ComputeHmacMD5ForHex(string text, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA1 algorithm using the given key.
+        /// </summary>
+        string ComputeHmacSha1ForHex(string textToHash, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA256 algorithm using the given key.
+        /// </summary>
+        string ComputeHmacSha256ForHex(string textToHash, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA384 algorithm using the given key.
+        /// </summary>
+        string ComputeHmacSha384ForHex(string textToHash, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA512 algorithm using the given key.
+        /// </summary>
+        string ComputeHmacSha512ForHex(string textToHash, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACMD5 algorithm using the given key and returns a Base64 encoded string.
+        /// </summary>
+        string ComputeHmacMD5ForBase64(string textToEncode, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA1 algorithm using the given key and returns a Base64 encoded string.
+        /// </summary>
+        string ComputeHmacSha1ForBase64(string textToEncode, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA384 algorithm using the given key and returns a Base64 encoded string.
+        /// </summary>
+        string ComputeHmacSha384ForBase64(string textToEncode, string key);
+
+
+        /// <summary>
+        ///     Computes a hash based on the HMACSHA512 algorithm using the given key and returns a Base64 encoded string.
+        /// </summary>
+        string ComputeHmacSha512ForBase64(string textToEncode, string key);
     }
 }
