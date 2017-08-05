@@ -27,8 +27,11 @@ namespace Hallmanac.CryptoHelpers_Net45
         /// Creates a new instance of the PasswordEncryptionSvc. If the application has a global application salt, then pass 
         /// that into this constructor otherwise the hashing will not match up.
         /// </summary>
-        /// <param name="globalApplicationSalt">The global application Salt is used to do an initial hash of the password
-        /// and then do a normal salt and hash of the password. The global app salt is kept secret inside Azure Key Vault
+        /// <param name="globalApplicationSalt">The Global Application Salt adds an extra layer of security to the password hashing
+        /// process by hashing each password with this salt first and then proceeding to the normal route of hashing a password. The
+        /// globalApplicationSalt itself is intended to be kept secret (i.e. stored in something like Azure Key Vault) which means that
+        /// even if someone were able to gain access to passwords they would not be able to brute force the password because, in theory,
+        /// they would not have access to the global application salt. 
         /// </param>
         public PasswordHashingSvc(string globalApplicationSalt = null)
         {
