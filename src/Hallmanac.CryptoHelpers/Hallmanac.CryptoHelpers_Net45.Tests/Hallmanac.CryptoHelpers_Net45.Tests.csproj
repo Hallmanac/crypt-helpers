@@ -54,6 +54,7 @@
     <Compile Include="ByteArrayExtensionTests.cs" />
     <Compile Include="CryptoHelpersTests.cs" />
     <Compile Include="HashingHelpersTests.cs" />
+    <Compile Include="PasswordHashingTests.cs" />
     <Compile Include="RandomGeneratorsTests.cs" />
     <Compile Include="StringExtensionTests.cs" />
     <Compile Include="SymmetricEncryptionSvcTests.cs" />
