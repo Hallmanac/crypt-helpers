@@ -25,15 +25,15 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.4\.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard1.4\Hallmanac.CryptoHelpers.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.4\.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard1.4\Hallmanac.CryptoHelpers.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hallmanac.Funqy.CSharp" Version="1.0.0" />
+    <PackageReference Include="Hallmanac.Funqy.CSharp" Version="1.1.0" />
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
     <PackageReference Include="System.Security.Cryptography.Primitives" Version="4.3.0" />
   </ItemGroup>
