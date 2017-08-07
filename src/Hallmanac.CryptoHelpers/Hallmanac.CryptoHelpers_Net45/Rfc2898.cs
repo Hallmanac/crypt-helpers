@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// Implementation of the Rfc2898 PBKDF2 specification located here http://www.ietf.org/rfc/rfc2898.txt using HMACSHA512 as the underlying PRF

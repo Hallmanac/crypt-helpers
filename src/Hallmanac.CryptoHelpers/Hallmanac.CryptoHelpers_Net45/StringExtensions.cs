@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace System
 {
     public static class StringExtensions
     {

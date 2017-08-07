@@ -1,4 +1,4 @@
-﻿namespace Hallmanac.CryptoHelpers_Net45
+﻿namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// Class type to hold data about the hashing of a password. For example, the Number of Iterations

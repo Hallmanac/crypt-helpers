@@ -1,4 +1,4 @@
-﻿namespace Hallmanac.CryptoHelpers_Net45
+﻿namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// A set of classes that contain helper functions that relate to cryptography such as password hashing and symmetric encryption.

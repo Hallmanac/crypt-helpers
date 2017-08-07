@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using Funqy.CSharp_Net45;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// Sizes of keys used when doing encryption with AES standards

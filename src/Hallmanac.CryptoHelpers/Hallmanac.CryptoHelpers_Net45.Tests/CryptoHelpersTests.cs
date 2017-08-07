@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CryptoHelpers45 = Hallmanac.CryptoHelpers.CryptoHelpers;
 
 
 namespace Hallmanac.CryptoHelpers_Net45.Tests
@@ -9,7 +10,7 @@ namespace Hallmanac.CryptoHelpers_Net45.Tests
         [TestMethod]
         public void Should_Properly_Hash_Password()
         {
-            var crypto = new CryptoHelpers();
+            var crypto = new CryptoHelpers45();
             const string password = "This is my Password!! 1234";
             var hashedPasswordResult = crypto.PasswordHashing.HashPassword(password);
 
@@ -21,7 +22,7 @@ namespace Hallmanac.CryptoHelpers_Net45.Tests
         [TestMethod]
         public void Comparing_Passwords_Should_Result_In_Equality()
         {
-            var crypto = new CryptoHelpers();
+            var crypto = new CryptoHelpers45();
             const string originalPassword = "This is my Password!! 1234";
             var hashedPasswordResult = crypto.PasswordHashing.HashPassword(originalPassword);
 

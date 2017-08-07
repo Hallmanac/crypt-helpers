@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// A series of helper methods to generate random data such as random bytes, random 32 bit number, random 64 bit number, etc.

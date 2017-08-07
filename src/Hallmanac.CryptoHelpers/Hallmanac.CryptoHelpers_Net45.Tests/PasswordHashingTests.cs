@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Hallmanac.CryptoHelpers;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 

@@ -1,9 +1,11 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace System
 {
+    /// <summary>
+    /// Extensions for the byte[] type
+    /// </summary>
     public static class ByteArrayExtensions
     {
         /// <summary>

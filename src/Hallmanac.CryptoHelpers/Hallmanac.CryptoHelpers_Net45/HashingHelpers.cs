@@ -1,7 +1,8 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 
 
-namespace Hallmanac.CryptoHelpers_Net45
+namespace Hallmanac.CryptoHelpers
 {
     /// <summary>
     /// Helper methods that allow for easily hashing data using various algorithms and returning strings
