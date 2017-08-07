@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-using Funqy.CSharp_Net45;
+using Funqy.CSharp;
 
 
 namespace Hallmanac.CryptoHelpers

@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Funqy.CSharp_Net45, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hallmanac.Funqy.CSharp_Net45.1.0.1\lib\net45\Funqy.CSharp_Net45.dll</HintPath>
+      <HintPath>..\packages\Hallmanac.Funqy.CSharp.1.1.0\lib\net45\Funqy.CSharp_Net45.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,8 +56,10 @@
     <Compile Include="SymmetricEncryptionSvc.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <Compile Include="PasswordHashingData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
