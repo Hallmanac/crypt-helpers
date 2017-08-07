@@ -7,7 +7,7 @@
     <ProjectGuid>{DBF88E5D-96A1-4359-9072-69700835A63C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hallmanac.CryptoHelpers_Net45</RootNamespace>
+    <RootNamespace>Hallmanac.CryptoHelpers</RootNamespace>
     <AssemblyName>Hallmanac.CryptoHelpers_Net45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Hallmanac.CryptoHelpers_Net45.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Hallmanac.CryptoHelpers_Net45.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Funqy.CSharp_Net45, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
