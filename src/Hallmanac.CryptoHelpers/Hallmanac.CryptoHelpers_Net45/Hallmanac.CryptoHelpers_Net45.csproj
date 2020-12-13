@@ -32,9 +32,6 @@
     <DocumentationFile>bin\Release\Hallmanac.CryptoHelpers_Net45.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Funqy.CSharp_Net45, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hallmanac.Funqy.CSharp.1.1.0\lib\net45\Funqy.CSharp_Net45.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ByteArrayExtensions.cs" />
+    <Compile Include="CommandResult.cs" />
+    <Compile Include="CommandResultFactory.cs" />
     <Compile Include="CryptoHelpers.cs" />
+    <Compile Include="FunctionalCommandExtensions.cs" />
     <Compile Include="HashingHelpers.cs" />
     <Compile Include="PasswordHashingSvc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,9 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PasswordHashingData.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

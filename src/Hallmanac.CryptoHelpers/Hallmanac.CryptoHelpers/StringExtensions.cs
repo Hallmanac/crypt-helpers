@@ -11,7 +11,7 @@ namespace System
         /// </summary>
         public static byte[] ToHexBytes(this string @this)
         {
-            if (string.IsNullOrWhiteSpace(@this))
+            if (String.IsNullOrWhiteSpace(@this))
                 return null;
 
             var rootHexString = @this.Replace("-", "");
@@ -38,7 +38,7 @@ namespace System
         /// <returns></returns>
         public static byte[] ToUtf8Bytes(this string @this)
         {
-            if (string.IsNullOrWhiteSpace(@this))
+            if (String.IsNullOrWhiteSpace(@this))
             {
                 return null;
             }

@@ -20,11 +20,11 @@ namespace Hallmanac.CryptoHelpers
     {
         //I made the variable names match the definition in RFC2898 - PBKDF2 where possible, so you can trace the code functionality back to the specification
         private readonly HMACSHA512 _hmacsha512Obj;
-        private readonly Int32 _hLen;
-        private readonly Byte[] _p;
-        private readonly Byte[] _s;
-        private readonly Int32 _c;
-        private Int32 _dkLen;
+        private readonly int _hLen;
+        private readonly byte[] _p;
+        private readonly byte[] _s;
+        private readonly int _c;
+        private int _dkLen;
 
         //Minimum rcommended itereations in Rfc2898
         private const int CMinIterations = 1000;
@@ -37,7 +37,7 @@ namespace Hallmanac.CryptoHelpers
         /// <param name="password">The Password to be hashed and is also the HMAC key</param>
         /// <param name="salt">Salt to be concatenated with the password</param>
         /// <param name="iterations">Number of iterations to perform HMACSHA Hashing for PBKDF2</param>
-        public Rfc2898(Byte[] password, Byte[] salt, Int32 iterations)
+        public Rfc2898(byte[] password, byte[] salt, int iterations)
         {
             if (iterations < CMinIterations)
             {
@@ -62,7 +62,7 @@ namespace Hallmanac.CryptoHelpers
         /// <param name="password">The Password to be hashed and is also the HMAC key</param>
         /// <param name="salt">Salt to be concatenated with the password</param>
         /// <param name="iterations">Number of iterations to perform HMACSHA Hashing for PBKDF2</param>
-        public Rfc2898(String password, Byte[] salt, Int32 iterations) : this(new UTF8Encoding(false).GetBytes(password), salt, iterations)
+        public Rfc2898(string password, byte[] salt, int iterations) : this(new UTF8Encoding(false).GetBytes(password), salt, iterations)
         {
 
         }
@@ -73,7 +73,7 @@ namespace Hallmanac.CryptoHelpers
         /// <param name="password">The Password to be hashed and is also the HMAC key</param>
         /// <param name="salt">Salt to be concatenated with the password</param>
         /// <param name="iterations">Number of iterations to perform HMACSHA Hashing for PBKDF2</param>
-        public Rfc2898(String password, String salt, Int32 iterations) : this(new UTF8Encoding(false).GetBytes(password), new UTF8Encoding(false).GetBytes(salt), iterations)
+        public Rfc2898(string password, string salt, int iterations) : this(new UTF8Encoding(false).GetBytes(password), new UTF8Encoding(false).GetBytes(salt), iterations)
         {
 
         }
@@ -84,14 +84,14 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         /// <param name="keyLength">Length in Bytes of Derived Key</param>
         /// <returns>Derived Key</returns>
-        public Byte[] GetDerivedKeyBytes_PBKDF2_HMACSHA512(int keyLength)
+        public byte[] GetDerivedKeyBytes_PBKDF2_HMACSHA512(int keyLength)
         {
             //no need to throw exception for dkLen too long as per spec because dkLen cannot be larger than Int32.MaxValue so not worth the overhead to check
             _dkLen = keyLength;
 
-            var l = Math.Ceiling((Double)_dkLen / _hLen);
+            var l = Math.Ceiling((double)_dkLen / _hLen);
 
-            var finalBlock = new Byte[0];
+            var finalBlock = new byte[0];
 
             for (var i = 1; i <= l; i++)
             {
@@ -107,7 +107,7 @@ namespace Hallmanac.CryptoHelpers
         /// <summary>
         /// Main Function F as defined in Rfc2898 PBKDF2 spec
         /// </summary>
-        private Byte[] F(Byte[] p, Byte[] s, Int32 c, Int32 i)
+        private byte[] F(byte[] p, byte[] s, int c, int i)
         {
 
             //Salt and Block number Int(i) concatenated as per spec
@@ -138,7 +138,7 @@ namespace Hallmanac.CryptoHelpers
         /// <summary>
         /// PRF function as defined in Rfc2898 PBKDF2 spec
         /// </summary>
-        private Byte[] Prf(Byte[] p, Byte[] s)
+        private byte[] Prf(byte[] p, byte[] s)
         {
             //HMACSHA512 Hashing, better than the HMACSHA1 in Microsofts implementation ;)
             return _hmacsha512Obj.ComputeHash(PMergeByteArrays(p, s));
@@ -147,7 +147,7 @@ namespace Hallmanac.CryptoHelpers
         /// <summary>
         /// This method returns the 4 octet encoded Int32 with most significant bit first as per spec
         /// </summary>
-        private static Byte[] Int(Int32 i)
+        private static byte[] Int(int i)
         {
             var I = BitConverter.GetBytes(i);
 
@@ -163,10 +163,10 @@ namespace Hallmanac.CryptoHelpers
         /// <summary>
         /// Merge two arrays into a new array
         /// </summary>
-        private static Byte[] PMergeByteArrays(Byte[] source1, Byte[] source2)
+        private static byte[] PMergeByteArrays(byte[] source1, byte[] source2)
         {
             //Most efficient way to merge two arrays this according to http://stackoverflow.com/questions/415291/best-way-to-combine-two-or-more-byte-arrays-in-c-sharp
-            var buffer = new Byte[source1.Length + source2.Length];
+            var buffer = new byte[source1.Length + source2.Length];
             Buffer.BlockCopy(source1, 0, buffer, 0, source1.Length);
             Buffer.BlockCopy(source2, 0, buffer, source1.Length, source2.Length);
 

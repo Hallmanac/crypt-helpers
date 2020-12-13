@@ -15,7 +15,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeMD5Hash(string textToHash, string salt = "")
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -32,7 +32,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeSha1Hash(string textToHash, string salt = "")
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -45,11 +45,11 @@ namespace Hallmanac.CryptoHelpers
 
         /// <summary>
         /// This will compute a basic SHA256 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         public string ComputeSha256Hash(string textToHash, string salt = "")
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -62,11 +62,11 @@ namespace Hallmanac.CryptoHelpers
 
         /// <summary>
         /// This will compute a basic SHA384 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         public string ComputeSha384Hash(string textToHash, string salt = "")
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -79,11 +79,11 @@ namespace Hallmanac.CryptoHelpers
 
         /// <summary>
         /// This will compute a basic SHA512 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         public string ComputeSha512Hash(string textToHash, string salt = "")
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -95,13 +95,13 @@ namespace Hallmanac.CryptoHelpers
 
 
         /// <summary>
-        /// Computes an HMAC hash based on the MD5 algorithm using the given key and returns a string in hexidecmal format
+        /// Computes an HMAC hash based on the MD5 algorithm using the given key and returns a string in hexadecimal format
         /// </summary>
         /// <param name="text">Text to Hash</param>
         /// <param name="key">Key to use for the HMAC part</param>
         public string ComputeHmacMD5ForHex(string text, string key)
         {
-            if (string.IsNullOrWhiteSpace(text) || string.IsNullOrWhiteSpace(key))
+            if (String.IsNullOrWhiteSpace(text) || String.IsNullOrWhiteSpace(key))
             {
                 return null;
             }
@@ -117,11 +117,11 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha1ForHex(string textToHash, string key)
         {
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
-            if (string.IsNullOrEmpty(key))
+            if (String.IsNullOrEmpty(key))
             {
                 return null;
             }
@@ -139,11 +139,11 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha256ForHex(string textToHash, string key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (String.IsNullOrEmpty(key))
             {
                 return null;
             }
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -160,11 +160,11 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha384ForHex(string textToHash, string key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (String.IsNullOrEmpty(key))
             {
                 return null;
             }
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -180,11 +180,11 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha512ForHex(string textToHash, string key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (String.IsNullOrEmpty(key))
             {
                 return null;
             }
-            if (string.IsNullOrEmpty(textToHash))
+            if (String.IsNullOrEmpty(textToHash))
             {
                 return null;
             }
@@ -200,7 +200,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacMD5ForBase64(string textToEncode, string key)
         {
-            if (string.IsNullOrWhiteSpace(textToEncode) || string.IsNullOrWhiteSpace(key))
+            if (String.IsNullOrWhiteSpace(textToEncode) || String.IsNullOrWhiteSpace(key))
             {
                 return null;
             }
@@ -216,7 +216,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha1ForBase64(string textToEncode, string key)
         {
-            if (string.IsNullOrWhiteSpace(textToEncode) || string.IsNullOrWhiteSpace(key))
+            if (String.IsNullOrWhiteSpace(textToEncode) || String.IsNullOrWhiteSpace(key))
             {
                 return null;
             }
@@ -232,7 +232,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha384ForBase64(string textToEncode, string key)
         {
-            if (string.IsNullOrWhiteSpace(textToEncode) || string.IsNullOrWhiteSpace(key))
+            if (String.IsNullOrWhiteSpace(textToEncode) || String.IsNullOrWhiteSpace(key))
             {
                 return null;
             }
@@ -248,7 +248,7 @@ namespace Hallmanac.CryptoHelpers
         /// </summary>
         public string ComputeHmacSha512ForBase64(string textToEncode, string key)
         {
-            if (string.IsNullOrWhiteSpace(textToEncode) || string.IsNullOrWhiteSpace(key))
+            if (String.IsNullOrWhiteSpace(textToEncode) || String.IsNullOrWhiteSpace(key))
             {
                 return null;
             }
@@ -281,21 +281,21 @@ namespace Hallmanac.CryptoHelpers
 
         /// <summary>
         /// This will compute a basic SHA256 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         string ComputeSha256Hash(string textToHash, string salt = "");
 
 
         /// <summary>
         /// This will compute a basic SHA384 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         string ComputeSha384Hash(string textToHash, string salt = "");
 
 
         /// <summary>
         /// This will compute a basic SHA512 hash for uses within this Encryption Service class. This hash is not recommended for
-        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to acheive proper password hashing
+        /// password use cases. Use the <see cref="IPasswordHashingSvc"/> to achieve proper password hashing
         /// </summary>
         string ComputeSha512Hash(string textToHash, string salt = "");
 

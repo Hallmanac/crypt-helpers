@@ -25,7 +25,7 @@ namespace Hallmanac.CryptoHelpers_Net45.Tests
         public void Should_Generate_Random_Hexadecimal_String_From_Byte_Array_Length()
         {
             var rg = new RandomGenerators();
-            const int byteLength = 32;
+            const int byteLength = 4;
             var hexString = rg.GenerateHexKeyFromByteLength(byteLength);
 
             Assert.IsNotNull(hexString);
@@ -73,7 +73,7 @@ namespace Hallmanac.CryptoHelpers_Net45.Tests
         public void Should_Generate_Random_32_Bit_Number()
         {
             var rg = new RandomGenerators();
-            var number32Bit = rg.GenerateRandom32BitNumberFromByteLength(32);
+            var number32Bit = rg.GenerateRandom32BitNumberFromByteLength(16);
 
             Assert.IsTrue(number32Bit > 0);
             Assert.IsTrue(number32Bit.ToString().Length < 11);
